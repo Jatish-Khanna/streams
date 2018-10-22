@@ -18,7 +18,6 @@ class Test{
 	
 	static final int hash(Object key) {
 		int calculatedHash = Objects.hashCode(key);
-//		return (calculatedHash ^ Integer.MAX_VALUE) + calculatedHash;
-		return (key == null) ? 0 : (calculatedHash = key.hashCode()) ^ (calculatedHash >>> 16);
+		return (calculatedHash = key.hashCode()) ^ (calculatedHash >>> 16);
 	}
 }
